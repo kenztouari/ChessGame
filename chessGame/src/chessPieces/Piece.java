@@ -3,6 +3,7 @@ package chessPieces;
 import java.util.ArrayList;
 
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -51,7 +52,7 @@ public abstract class Piece extends ImageView  {
 	
 	public static Node getPieceOnTheWay(GridPane board, int col, int row) {
 		ObservableList<Node>recapBoard = board.getChildren(); 
-		ArrayList<Node>piecesOnTheBoard = new ArrayList(recapBoard);
+		FilteredList<Node>piecesOnTheBoard = new FilteredList<Node>(recapBoard);
 		for (Node node : piecesOnTheBoard) {
 			if(node instanceof ImageView) {
 				Integer columnIndex = GridPane.getColumnIndex(node);

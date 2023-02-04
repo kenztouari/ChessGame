@@ -2,9 +2,9 @@ package chessPieces;
 
 import java.util.ArrayList;
 
+import application.Controleur;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
-import movements.Diagonal;
 import movements.Linear;
 
 public class Rook extends Piece implements Linear {

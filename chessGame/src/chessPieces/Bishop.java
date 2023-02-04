@@ -2,6 +2,7 @@ package chessPieces;
 
 import java.util.ArrayList;
 
+import application.Controleur;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import movements.Diagonal;
@@ -20,6 +21,7 @@ public class Bishop extends Piece implements Diagonal{
 		moveUpRight(board, x,y, previsions);
 		moveDownLeft(board, x,y, previsions);
 		moveDownRight(board,x,y,  previsions);
+		return previsions;
 }
 	@Override 
 	public void moveUpLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {

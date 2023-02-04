@@ -2,10 +2,9 @@ package chessPieces;
 
 import java.util.ArrayList;
 
+import application.Controleur;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
-import movements.Diagonal;
-import movements.Linear;
 
 public class Pawn extends Piece {
 
@@ -61,5 +60,7 @@ public class Pawn extends Piece {
 			}
 			lookForAPiece(board, otherX+x,otherY+y).setStyle("-fx-backrground-color:GREY");
 		}
+		return false; 
 	}
+
 }

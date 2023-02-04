@@ -2,6 +2,7 @@ package chessPieces;
 
 import java.util.ArrayList;
 
+import application.Controleur;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import movements.Diagonal;
