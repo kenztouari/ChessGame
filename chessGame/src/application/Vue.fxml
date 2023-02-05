@@ -72,7 +72,7 @@
       </HBox>
    </bottom>
    <center>
-      <GridPane fx:id="echiquier" alignment="CENTER" gridLinesVisible="true" prefHeight="556.0" prefWidth="512.0" style="-fx-border-color: BLACK;" BorderPane.alignment="CENTER">
+      <GridPane fx:id="board" alignment="CENTER" gridLinesVisible="true" prefHeight="556.0" prefWidth="512.0" style="-fx-border-color: BLACK;" BorderPane.alignment="CENTER">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -94,7 +94,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label fx:id="bckgd_22" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+ <Label fx:id="bckgd_22" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
 <Label fx:id="bckgd_57" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
 <Label fx:id="bckgd_20" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" />
 <Label fx:id="bckgd_11" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
