@@ -269,6 +269,7 @@ void blackSurrender (MouseEvent event) {
 	try {
 		pieceToPlay = null; 
 		previsions.clear(); 
+		pieceBoard.clear();
 		Stage stage=(Stage) piece_00.getScene().getWindow();
 		stage.close();
 		Parent root = FXMLLoader.load(getClass().getResource("whitewin.fxml"));
@@ -292,11 +293,12 @@ try{
 	previsions.clear(); 
 	Stage stage=(Stage) piece_00.getScene().getWindow();
 	stage.close();
-	Parent root = FXMLLoader.load(getClass().getResource("whitewin.fxml"));
+	Parent root = FXMLLoader.load(getClass().getResource("Draw.fxml"));
 	Scene scene = new Scene(root);
 	Stage newWindow = new Stage();
 	newWindow.setTitle("White win");
 	newWindow.setScene(scene);
+	newWindow.setResizable(false);
 	newWindow.show();
 }
 catch(IOException e ) {
@@ -316,6 +318,7 @@ catch(IOException e ) {
 			Stage newWindow = new Stage();
 			newWindow.setTitle("Black win");
 			newWindow.setScene(scene);
+			newWindow.setResizable(false);
 			newWindow.show();
 		}
 		catch(IOException e ) {
@@ -364,7 +367,6 @@ public static Piece findControleur(Node source) {
 		}
 	}
 	return null;
-	
 }
 
 public static int getValue(Object valeur) {
@@ -438,6 +440,7 @@ void Act(MouseEvent event ) {
 		int y=getValue(GridPane.getRowIndex(piece_cell));
 		pieceToPlay.Move(board, x,y);
 		pieceToPlay=null; 
+		stopPrevision();
 		if(whitePlay==false) {
 			whitePlay= true;
 		}

@@ -43,7 +43,7 @@ public abstract class Piece extends ImageView  {
 			if(rowIndex==null) {
 				rowIndex=0; 
 			}
-			if(rowIndex==col || columnIndex==row) {
+			if(rowIndex==col && columnIndex==row) {
 				return (node);
 			}
 		}
@@ -65,7 +65,7 @@ public abstract class Piece extends ImageView  {
 				if(rowIndex==null) {
 					rowIndex=0; 
 			}
-				if(rowIndex==col || columnIndex==row) {
+				if(rowIndex==col && columnIndex==row) {
 					return (node);
 				}
 		}

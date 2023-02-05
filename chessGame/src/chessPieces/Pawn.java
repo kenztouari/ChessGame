@@ -54,8 +54,8 @@ public class Pawn extends Piece {
 		}
 	
 	public boolean previsions(GridPane board, int x, int y, int otherX, int otherY) {
-		if(getPieceOnTheWay(board,x,y)!=null) {
-			if(Controleur.findControleur(getPieceOnTheWay(board, x+otherX, y+otherY)).getColor()!=this.getColor()) {
+		if(getPieceOnTheWay(board,x+otherX,y+otherY)!=null) {
+			if(Controleur.findControleur(getPieceOnTheWay(board, x+otherX, y+otherY)).getColor()==this.getColor()) {
 				return false; 
 			}
 			lookForAPiece(board, otherX+x,otherY+y).setStyle("-fx-backrground-color:GREY");

@@ -28,9 +28,9 @@ public  ArrayList <Node> seePossibilities (GridPane board, int x, int y){
 
 @Override 
 public void moveUpLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
-	for (int i=0; i<8; i++) {
+	for (int i=1; i<=y; i++) {
 	if(x-i>=0 && y-i>=0) {
-		if(previsions(board,x-1,y-1)==false) {
+		if(previsions(board,x-i,y-i)==false) {
 			previsions.add(lookForAPiece(board,x-i, y-i));
 		}
 		else {
@@ -39,6 +39,7 @@ public void moveUpLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
 				previsions.add(lookForAPiece(board,x-i, y-i));
 				previsions.add(getPieceOnTheWay(board,x-i, y-i));
 			}
+			break;
 		}
 	}
 }
@@ -46,13 +47,13 @@ public void moveUpLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
 
 @Override 
 public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) {
-	for (int i=0; i<8; i++) {
-	if(x+i<8 && y-i<8) {
-		if(previsions(board,x+i,y-i)==false) {previsions.add(lookForAPiece(board,x+1, y-1));
+	for (int i=1; i<=y; i++) {
+	if(x+i<8 && y-i>=0) {
+		if(previsions(board,x+i,y-i)==false) {previsions.add(lookForAPiece(board,x+i, y-i));
 	}
 		else {
 			if(Controleur.findControleur(getPieceOnTheWay(board,x+i,y-i)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x+1, y-1).setStyle("-fx-background-color : GREY");
+				lookForAPiece(board, x+i, y-i).setStyle("-fx-background-color : GREY");
 				previsions.add(lookForAPiece(board,x+i, y-i));
 				previsions.add(getPieceOnTheWay(board,x+i, y-i));
 		}
@@ -63,7 +64,7 @@ public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) 
 
 @Override
 public void moveDownLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
+	for (int i =1; i<8-y; i++) {
 	if(x-i>=0 && y+i<8) {
 		if(previsions(board,x-i,y+i)==false) {
 			previsions.add(lookForAPiece(board,x+i, y-i));
@@ -74,6 +75,7 @@ public void moveDownLeft(GridPane board, int x, int y,ArrayList<Node>previsions)
 				previsions.add(lookForAPiece(board,x-i, y+i));
 				previsions.add(getPieceOnTheWay(board,x-i, y+i));
 		}
+			break;
 	}
 }
 }
@@ -81,7 +83,7 @@ public void moveDownLeft(GridPane board, int x, int y,ArrayList<Node>previsions)
 
 @Override
 public void moveDownRight (GridPane board, int x, int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
+	for (int i =1; i<8-y; i++) {
 	if(x+i<8 && y+i<8) {
 		if(previsions(board,x+i,y+i)==false) {
 			previsions.add(lookForAPiece(board,x+i, y+i));
@@ -92,6 +94,7 @@ public void moveDownRight (GridPane board, int x, int y,ArrayList<Node>prevision
 				previsions.add(lookForAPiece(board,x+i, y+i));
 				previsions.add(getPieceOnTheWay(board,x+i, y+i));
 		}
+			break;
 	}
 }
 }	
@@ -99,78 +102,77 @@ public void moveDownRight (GridPane board, int x, int y,ArrayList<Node>prevision
 
 @Override
 public void movetoTop(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(y-i>=0) {
+	for (int i =y-1; i>=0; i--) {
 		if(previsions(board,x,y-i)==false) {
 			previsions.add(lookForAPiece(board,x, y-i));
 		}
 		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x,y-1)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x, y-i).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x, y-i));
-				previsions.add(getPieceOnTheWay(board,x, y-i));
+			if(Controleur.findControleur(getPieceOnTheWay(board,x,i)).getColor()!=this.getColor()) {
+				lookForAPiece(board, x, i).setStyle("-fx-background-color : GREY");
+				previsions.add(lookForAPiece(board,x, i));
+				previsions.add(getPieceOnTheWay(board,x, i));
 		}
+			break;
 		
 	}
 }
 }
-}
+
 
 
 @Override
 public void movetoBottom(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(y+i<8) {
-		if(previsions(board,x,y-i)==false) {
-			previsions.add(lookForAPiece(board,x, y+1));
+	for (int i =y+1; i<8; i++) {
+		if(previsions(board,x,i)==false) {
+			previsions.add(lookForAPiece(board,x, i));
 		}
 		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x,y+i)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x, y+i).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x, y+i));
-				previsions.add(getPieceOnTheWay(board,x, y+i));
+			if(Controleur.findControleur(getPieceOnTheWay(board,x,i)).getColor()!=this.getColor()) {
+				lookForAPiece(board, x, i).setStyle("-fx-background-color : GREY");
+				previsions.add(lookForAPiece(board,x, i));
+				previsions.add(getPieceOnTheWay(board,x, i));
 		}
 		
 	}
 }
 }
-}
+
 
 @Override
 public void movetoLeft(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(x-i>=0) {
-		if(previsions(board,x-i,y)==false) {
-			previsions.add(lookForAPiece(board,x-i, y));
+	for (int i =x-1; i>=0; i--) {
+		if(previsions(board,i,y)==false) {
+			previsions.add(lookForAPiece(board,i, y));
 		}
 		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x-i,y)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x-1, y).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x-i, y));
-				previsions.add(getPieceOnTheWay(board,x-i, y));
+			if(Controleur.findControleur(getPieceOnTheWay(board,i,y)).getColor()!=this.getColor()) {
+				lookForAPiece(board, i, y).setStyle("-fx-background-color : GREY");
+				previsions.add(lookForAPiece(board,i, y));
+				previsions.add(getPieceOnTheWay(board,i, y));
 		}
+			break;
 		
 	}
-}
 }
 }
 
+
 @Override
 public void movetoRight(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(x+i<8) {
-		if(previsions(board,x+1,y)==false) {
-			previsions.add(lookForAPiece(board,x+i, y));
+	for (int i =x+1; i<8; i++) {
+
+		if(previsions(board,i,y)==false) {
+			previsions.add(lookForAPiece(board,i, y));
 		}
 		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x+i,y)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x+i, y).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x+i, y));
-				previsions.add(getPieceOnTheWay(board,x+i, y));
+			if(Controleur.findControleur(getPieceOnTheWay(board,i,y)).getColor()!=this.getColor()) {
+				lookForAPiece(board, i, y).setStyle("-fx-background-color : GREY");
+				previsions.add(lookForAPiece(board,i, y));
+				previsions.add(getPieceOnTheWay(board,i, y));
 		}
-		
+		break;
 	}
-}
+
 }
 }
 

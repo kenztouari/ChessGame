@@ -62,9 +62,9 @@ public class GameMenu extends Parent{
 			
 			btnOptions.setOnMouseClicked(event ->{
 				Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("Rules of Chess");
+				alert.setTitle("Chess Rules");
 				alert.setHeaderText(null);
-				alert.setContentText("The rules of chess (also known as the laws of chess) are rules governing the play of the game of chess. While the exact origins of chess are unclear, modern rules first took form during the Middle Ages. The rules continued to be slightly modified until the early 19th century, when they reached essentially their current form. The rules also varied somewhat from place to place. Today, the standard rules are set by FIDE (Federation Internationale des echecs), the international governing body for chess. Slight modifications are made by some national organizations for their own purposes. There are variations of the rules for fast chess, correspondence chess, online chess, and Chess960.\n" + 
+				alert.setContentText("The chess rules (also known as the chess laws ) are rules governing the play of the game of chess. While the exact origins of chess are unclear, modern rules first took form during the Middle Ages. The rules continued to be slightly modified until the early 19th century, when they reached essentially their current form. The rules also varied somewhat from place to place. Today, the standard rules are set by FIDE (Federation Internationale des echecs), the international governing body for chess. Slight modifications are made by some national organizations for their own purposes. There are variations of the rules for fast chess, correspondence chess, online chess, and Chess960.\n" + 
 						"\n" + 
 						"Chess is a two-player board game using a chessboard and sixteen pieces of six types for each player. Each type of piece moves in a distinct way. The object of the game is to checkmate (threaten with inescapable capture) the opponent's king. Games do not necessarily end in checkmate; players often resign if they believe they will lose. A game can also end in a draw in several ways.\n" + 
 						"\n" );
