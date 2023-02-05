@@ -158,6 +158,8 @@ private Label piece_74;
 private Label piece_76;
 @FXML
 private Label piece_67;
+@FXML
+private Label piece_22;
 
 
 

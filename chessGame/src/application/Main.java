@@ -37,7 +37,7 @@ public class Main extends Application {
 			
 			
 			
-			InputStream is = Files.newInputStream(Paths.get("res/images/chessdark.jpg"));
+			InputStream is = Files.newInputStream(Paths.get("res/images/image1.jpg"));
 			
 			Image img = new Image(is);
 			
