@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
@@ -29,8 +30,9 @@ private static boolean whitePlay;
 private static ArrayList<Piece> pieceBoard=new ArrayList<Piece>();
 private static Piece pieceToPlay; 
 private static ArrayList<Node>previsions= new ArrayList<Node>();
+@FXML
 private GridPane board; 
-
+@FXML
 private Label piece_57;
 @FXML
 private Label piece_20;
@@ -160,64 +162,108 @@ private Label piece_67;
 
 
 //white pawns 
+@FXML
 private ImageView whitePawn_1; 
+@FXML
 private ImageView whitePawn_2; 
+@FXML
 private ImageView whitePawn_3; 
+@FXML
 private ImageView whitePawn_4; 
+@FXML
 private ImageView whitePawn_5;
+@FXML
 private ImageView whitePawn_6;
+@FXML
 private ImageView whitePawn_7; 
+@FXML
 private ImageView whitePawn_8; 
 
+
 //black pawns 
-private ImageView blackPawn_1; 
-private ImageView blackPawn_2; 
+
+@FXML
+private ImageView blackPawn_1;
+@FXML
+private ImageView blackPawn_2;
+@FXML
 private ImageView blackPawn_3; 
+@FXML
 private ImageView blackPawn_4; 
+@FXML
 private ImageView blackPawn_5;
+@FXML
 private ImageView blackPawn_6;
+@FXML
 private ImageView blackPawn_7; 
+@FXML
 private ImageView blackPawn_8; 
 
 //white rooks
+@FXML
 private ImageView whiteRook_1;
+@FXML
 private ImageView whiteRook_2;
 
 //black rooks 
+@FXML
 private ImageView blackRook_1;
+@FXML
 private ImageView blackRook_2;
 
 //white Horsemans
+@FXML
 private ImageView whiteHorseman_1; 
+@FXML
 private ImageView whiteHorseman_2; 
 
 //black Horsemans 
+@FXML
 private ImageView blackHorseman_1; 
+@FXML
 private ImageView blackHorseman_2; 
 
 // black Queen 
+@FXML
 private ImageView blackQueen;
 
 //white Queen
+@FXML
 private ImageView whiteQueen; 
 
 // black King 
+@FXML
 private ImageView blackKing;
 
 // white King 
+@FXML
 private ImageView whiteKing; 
 
 // white bishop 
+@FXML
 private ImageView whiteBishop_1; 
+@FXML
 private ImageView whiteBishop_2; 
 
 // black bishop 
+@FXML
 private ImageView blackBishop_1; 
+@FXML
 private ImageView blackBishop_2; 
 
-// 
 
-void blackSureender (MouseEvent event) {
+@FXML
+private Button btnWhiteSurrender;
+
+@FXML
+private Button btnDraw;
+
+@FXML
+private Button btnBlackSurrender;
+
+// 
+@FXML
+void blackSurrender (MouseEvent event) {
 	try {
 		pieceToPlay = null; 
 		previsions.clear(); 
@@ -235,6 +281,7 @@ void blackSureender (MouseEvent event) {
 	}
 }
 	
+@FXML
  void draw(MouseEvent event) {
 	 
 try{
@@ -254,8 +301,8 @@ catch(IOException e ) {
 	e.printStackTrace(); 
 }
  }
- 
- void whiteSureender(MouseEvent event) {
+@FXML
+ void whiteSurrender(MouseEvent event) {
 	 try{
 			pieceToPlay = null; 
 
@@ -378,6 +425,28 @@ public boolean win ( Piece piece ) {
 		}
 	}
 	return false; 
+}
+
+@FXML 
+void Act(MouseEvent event ) {
+	Label piece = (Label) event.getSource();
+	if (piece.getStyle().equals("-fx-backrground-color : GREY")) {
+		Node piece_cell=(Node)event.getSource();
+		int x=getValue(GridPane.getColumnIndex(piece_cell));
+		int y=getValue(GridPane.getRowIndex(piece_cell));
+		pieceToPlay.Move(board, x,y);
+		pieceToPlay=null; 
+		if(whitePlay==false) {
+			whitePlay= true;
+		}
+		else {
+			whitePlay=false;
+		}
+	}
+	else {
+		pieceToPlay= null; 
+		stopPrevision();
+	}
 }
 
 @Override 
