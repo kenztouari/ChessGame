@@ -23,19 +23,19 @@ public  ArrayList <Node> seePossibilities (GridPane board, int x, int y){
 
 @Override
 public void movetoTop(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(y-i>=0) {
-		if(previsions(board,x,y-i)==false) {
-			previsions.add(lookForAPiece(board,x, y-i));
-		}
-		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x,y-1)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x, y-i).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x, y-i));
-				previsions.add(getPieceOnTheWay(board,x, y-i));
-		}
-		
+	
+	for (int i =y-1; i>=0; i--) {
+	if(previsions(board,x,y-i)==false) {
+		previsions.add(lookForAPiece(board,x, y-i));
 	}
+	else {
+		if(Controleur.findControleur(getPieceOnTheWay(board,x,i)).getColor()!=this.getColor()) {
+			lookForAPiece(board, x, i).setStyle("-fx-background-color : GREY");
+			previsions.add(lookForAPiece(board,x, i));
+			previsions.add(getPieceOnTheWay(board,x, i));
+	}
+		break;
+	
 }
 }
 }
@@ -43,61 +43,60 @@ public void movetoTop(GridPane board, int x,int y,ArrayList<Node>previsions) {
 
 @Override
 public void movetoBottom(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(y+i<8) {
-		if(previsions(board,x,y-i)==false) {
-			previsions.add(lookForAPiece(board,x, y+1));
+	for (int i =y+1; i<8; i++) {
+		if(previsions(board,x,i)==false) {
+			previsions.add(lookForAPiece(board,x, i));
 		}
 		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x,y+i)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x, y+i).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x, y+i));
-				previsions.add(getPieceOnTheWay(board,x, y+i));
+			if(Controleur.findControleur(getPieceOnTheWay(board,x,i)).getColor()!=this.getColor()) {
+				lookForAPiece(board, x, i).setStyle("-fx-background-color : GREY");
+				previsions.add(lookForAPiece(board,x, i));
+				previsions.add(getPieceOnTheWay(board,x, i));
 		}
+			break; 
 		
 	}
-}
 }
 }
 
-@Override
 public void movetoLeft(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(x-i>=0) {
-		if(previsions(board,x-i,y)==false) {
-			previsions.add(lookForAPiece(board,x-i, y));
+	for (int i =x-1; i>=0; i--) {
+		if(previsions(board,i,y)==false) {
+			previsions.add(lookForAPiece(board,i, y));
 		}
 		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x-i,y)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x-1, y).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x-i, y));
-				previsions.add(getPieceOnTheWay(board,x-i, y));
+			if(Controleur.findControleur(getPieceOnTheWay(board,i,y)).getColor()!=this.getColor()) {
+				lookForAPiece(board, i, y).setStyle("-fx-background-color : GREY");
+				previsions.add(lookForAPiece(board,i, y));
+				previsions.add(getPieceOnTheWay(board,i, y));
 		}
+			break;
 		
 	}
 }
 }
-}
+
 
 @Override
 public void movetoRight(GridPane board, int x,int y,ArrayList<Node>previsions) {
-	for (int i =0; i<8; i++) {
-	if(x+i<8) {
-		if(previsions(board,x+1,y)==false) {
-			previsions.add(lookForAPiece(board,x+i, y));
+	System.out.println("xxxxxxxxxxx="+x);
+	for (int i =x+1; i<8; i++) {
+
+		if(previsions(board,i,y)==false) {
+			System.out.println("i="+i);
+			previsions.add(lookForAPiece(board,i, y));
 		}
 		else {
-			if(Controleur.findControleur(getPieceOnTheWay(board,x+i,y)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x+i, y).setStyle("-fx-background-color : GREY");
-				previsions.add(lookForAPiece(board,x+i, y));
-				previsions.add(getPieceOnTheWay(board,x+i, y));
+			if(Controleur.findControleur(getPieceOnTheWay(board,i,y)).getColor()!=this.getColor()) {
+				lookForAPiece(board, i, y).setStyle("-fx-background-color : GREY");
+				previsions.add(lookForAPiece(board,i, y));
+				previsions.add(getPieceOnTheWay(board,i, y));
 		}
-		
+		break;
 	}
-}
+
 }
 }
 
-
-
 }
+

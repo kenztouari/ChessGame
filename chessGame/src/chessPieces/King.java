@@ -17,7 +17,7 @@ public  ArrayList <Node> seePossibilities (GridPane board, int x, int y){
 	ArrayList<Node> previsions = new ArrayList<Node>();
 	moveUpLeft( board,x,y, previsions);
 	moveUpRight(board, x,y, previsions);
-	moveDownLeft(board, x,y, previsions);
+		moveDownLeft(board, x,y, previsions);
 	moveDownRight(board,x,y,  previsions);
 	movetoTop(board, x,y,previsions);
 	movetoBottom(board,x,y,previsions); 
@@ -43,8 +43,9 @@ public void moveUpLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
 }
 @Override 
 public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) {
-	if(x+1<8 && y-1<8) {
-		if(previsions(board,x+1,y-1)==false) {previsions.add(lookForAPiece(board,x+1, y-1));
+	if(x+1<8 && y-1>=0) {
+		if(previsions(board,x+1,y-1)==false) {
+			previsions.add(lookForAPiece(board,x+1, y-1));
 	}
 		else {
 			if(Controleur.findControleur(getPieceOnTheWay(board,x+1,y-1)).getColor()!=this.getColor()) {
@@ -60,7 +61,7 @@ public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) 
 public void moveDownLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
 	if(x-1>=0 && y+1<8) {
 		if(previsions(board,x-1,y+1)==false) {
-			previsions.add(lookForAPiece(board,x+1, y-1));
+			previsions.add(lookForAPiece(board,x-1, y+1));
 		}
 		else {
 			if(Controleur.findControleur(getPieceOnTheWay(board,x-1,y+1)).getColor()!=this.getColor()) {
@@ -109,7 +110,7 @@ public void movetoTop(GridPane board, int x,int y,ArrayList<Node>previsions) {
 @Override
 public void movetoBottom(GridPane board, int x,int y,ArrayList<Node>previsions) {
 	if(y+1<8) {
-		if(previsions(board,x,y-1)==false) {
+		if(previsions(board,x,y+1)==false) {
 			previsions.add(lookForAPiece(board,x, y+1));
 		}
 		else {

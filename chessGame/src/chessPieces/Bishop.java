@@ -25,7 +25,7 @@ public class Bishop extends Piece implements Diagonal{
 }
 	@Override 
 	public void moveUpLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
-		for (int i=0; i<y; i++) {
+		for (int i=1; i<=y; i++) {
 			if(x-i>=0 && y-i>=0) {
 				if(previsions(board,x-i,y-i)==false ) {
 					previsions.add(lookForAPiece(board,x-i, y-i));
@@ -43,8 +43,8 @@ public class Bishop extends Piece implements Diagonal{
 
 @Override 
 public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) {
-	for (int i=0; i<y; i++) {
-	if(x+i<8 && y-i<8) {
+	for (int i=1; i<=y; i++) {
+	if(x+i<8 && y-i>=0) {
 		if(previsions(board,x+i,y-i)==false) {previsions.add(lookForAPiece(board,x+1, y-1));
 	}
 		else {
@@ -60,10 +60,10 @@ public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) 
 
 @Override
 public void moveDownLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
-	for (int i =0; i<y; i++) {
+	for (int i =1; i<8-y; i++) {
 	if(x-i>=0 && y+i<8) {
 		if(previsions(board,x-i,y+i)==false) {
-			previsions.add(lookForAPiece(board,x+i, y-i));
+			previsions.add(lookForAPiece(board,x+i, y+i));
 		}
 		else {
 			if(Controleur.findControleur(getPieceOnTheWay(board,x-i,y+i)).getColor()!=this.getColor()) {
@@ -78,7 +78,7 @@ public void moveDownLeft(GridPane board, int x, int y,ArrayList<Node>previsions)
 
 @Override
 public void moveDownRight (GridPane board, int x, int y,ArrayList<Node>previsions) {
-	for (int i =0; i<y; i++) {
+	for (int i =1; i<8-y; i++) {
 	if(x+i<8 && y+i<8) {
 		if(previsions(board,x+i,y+i)==false) {
 			previsions.add(lookForAPiece(board,x+i, y+i));

@@ -57,6 +57,7 @@ public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) 
 				previsions.add(lookForAPiece(board,x+i, y-i));
 				previsions.add(getPieceOnTheWay(board,x+i, y-i));
 		}
+			break;
 }
 }
 }
@@ -64,21 +65,32 @@ public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) 
 
 @Override
 public void moveDownLeft(GridPane board, int x, int y,ArrayList<Node>previsions) {
+	System.out.println("x ="+x);
+	System.out.println("y ="+y);
 	for (int i =1; i<8-y; i++) {
+		System.out.println("i ="+i);
 	if(x-i>=0 && y+i<8) {
 		if(previsions(board,x-i,y+i)==false) {
-			previsions.add(lookForAPiece(board,x+i, y-i));
+			System.out.println("if ok1");
+			previsions.add(lookForAPiece(board,x-i, y+i));
+			System.out.println("if ok2");
 		}
 		else {
+			System.out.println("else if ok");
 			if(Controleur.findControleur(getPieceOnTheWay(board,x-i,y+i)).getColor()!=this.getColor()) {
+				System.out.println("x= "+Controleur.findControleur(getPieceOnTheWay(board,x-i,y+i)));
+				System.out.println("xfor ="+x);
+				System.out.println("yfor ="+y);
 				lookForAPiece(board, x-i, y+i).setStyle("-fx-background-color : GREY");
 				previsions.add(lookForAPiece(board,x-i, y+i));
 				previsions.add(getPieceOnTheWay(board,x-i, y+i));
 		}
+		
 			break;
 	}
 }
 }
+	
 }
 
 @Override
@@ -103,8 +115,8 @@ public void moveDownRight (GridPane board, int x, int y,ArrayList<Node>prevision
 @Override
 public void movetoTop(GridPane board, int x,int y,ArrayList<Node>previsions) {
 	for (int i =y-1; i>=0; i--) {
-		if(previsions(board,x,y-i)==false) {
-			previsions.add(lookForAPiece(board,x, y-i));
+		if(previsions(board,x,i)==false) {
+			previsions.add(lookForAPiece(board,x, i));
 		}
 		else {
 			if(Controleur.findControleur(getPieceOnTheWay(board,x,i)).getColor()!=this.getColor()) {
@@ -132,6 +144,7 @@ public void movetoBottom(GridPane board, int x,int y,ArrayList<Node>previsions) 
 				previsions.add(lookForAPiece(board,x, i));
 				previsions.add(getPieceOnTheWay(board,x, i));
 		}
+			break; 
 		
 	}
 }
@@ -159,9 +172,11 @@ public void movetoLeft(GridPane board, int x,int y,ArrayList<Node>previsions) {
 
 @Override
 public void movetoRight(GridPane board, int x,int y,ArrayList<Node>previsions) {
+	System.out.println("xxxxxxxxxxx="+x);
 	for (int i =x+1; i<8; i++) {
 
 		if(previsions(board,i,y)==false) {
+			System.out.println("i="+i);
 			previsions.add(lookForAPiece(board,i, y));
 		}
 		else {

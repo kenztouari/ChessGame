@@ -26,7 +26,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 
 public class Controleur implements Initializable  {
-private static boolean whitePlay; 
+private static boolean whitePlay=false; 
 private static ArrayList<Piece> pieceBoard=new ArrayList<Piece>();
 private static Piece pieceToPlay; 
 private static ArrayList<Node>previsions= new ArrayList<Node>();
@@ -271,6 +271,7 @@ void blackSurrender (MouseEvent event) {
 		previsions.clear(); 
 		pieceBoard.clear();
 		Stage stage=(Stage) piece_00.getScene().getWindow();
+		
 		stage.close();
 		Parent root = FXMLLoader.load(getClass().getResource("whitewin.fxml"));
 		Scene scene = new Scene(root);
@@ -351,7 +352,7 @@ void showPossibilities (MouseEvent event ) {
 		
 		if(findControleur(source)!=null) {
 			pieceToPlay=findControleur(source); 
-			if(whitePlay==true && pieceToPlay.getColor().equals("white")) {
+		if(whitePlay==true && pieceToPlay.getColor().equals("white")) {
 				previsions=pieceToPlay.seePossibilities(board, x,y);
 			}
 			else if( whitePlay==false && pieceToPlay.getColor().equals("black")) {
@@ -361,7 +362,9 @@ void showPossibilities (MouseEvent event ) {
 }
 
 public static Piece findControleur(Node source) {
+	System.out.println("x ="+source.getId().toString());
 	for (int i =0; i<Controleur.pieceBoard.size(); i++) {
+		
 		if(source.getId().toString().equals(Controleur.pieceBoard.get(i).toString())) {
 			return Controleur.pieceBoard.get(i);
 		}
@@ -415,10 +418,10 @@ public boolean win ( Piece piece ) {
 		try {
 			Stage stage = (Stage) piece_00.getScene().getWindow(); 
 			stage.close();
-			Parent root = FXMLLoader.load(getClass().getResource("whitewin.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("blackwin.fxml"));
 			Scene scene = new Scene(root);
 			Stage newWindow = new Stage();
-			newWindow.setTitle("White win");
+			newWindow.setTitle("Black win");
 			newWindow.setScene(scene);
 			newWindow.show();
 			return true;
@@ -428,6 +431,28 @@ public boolean win ( Piece piece ) {
 			e.printStackTrace(); 
 		}
 	}
+	else if(piece.toString().equals("whiteKing")) {
+	    pieceToPlay=null; 
+		previsions.clear();
+		pieceBoard.clear();
+	
+	try {
+		Stage stage = (Stage) piece_00.getScene().getWindow(); 
+		stage.close();
+		Parent root = FXMLLoader.load(getClass().getResource("whitewin.fxml"));
+		Scene scene = new Scene(root);
+		Stage newWindow = new Stage();
+		newWindow.setTitle("White win");
+		newWindow.setScene(scene);
+		newWindow.show();
+		return true;
+		
+	}
+	catch(IOException e ) {
+		e.printStackTrace(); 
+	}
+}
+		
 	return false; 
 }
 
@@ -458,28 +483,28 @@ void Act(MouseEvent event ) {
 public void initialize( URL arg0, ResourceBundle arg1) {
 	whitePlay=true; 
 	this.whitePawn_1 = new Pawn("whitePawn_1","white", whitePawn_1);
-	this.whitePawn_2 = new Pawn("whitePawn_1","white", whitePawn_2);
-	this.whitePawn_3 = new Pawn("whitePawn_1","white", whitePawn_3);
-	this.whitePawn_4 = new Pawn("whitePawn_1","white", whitePawn_4);
-	this.whitePawn_5 = new Pawn("whitePawn_1","white", whitePawn_5);
-	this.whitePawn_6 = new Pawn("whitePawn_1","white", whitePawn_6);
-	this.whitePawn_7 = new Pawn("whitePawn_1","white", whitePawn_7);
-	this.whitePawn_8 = new Pawn("whitePawn_1","white", whitePawn_8);
+	this.whitePawn_2 = new Pawn("whitePawn_2","white", whitePawn_2);
+	this.whitePawn_3 = new Pawn("whitePawn_3","white", whitePawn_3);
+	this.whitePawn_4 = new Pawn("whitePawn_4","white", whitePawn_4);
+	this.whitePawn_5 = new Pawn("whitePawn_5","white", whitePawn_5);
+	this.whitePawn_6 = new Pawn("whitePawn_6","white", whitePawn_6);
+	this.whitePawn_7 = new Pawn("whitePawn_7","white", whitePawn_7);
+	this.whitePawn_8 = new Pawn("whitePawn_8","white", whitePawn_8);
 	
 	this.blackPawn_1 = new Pawn("blackPawn_1","black", blackPawn_1);
-	this.blackPawn_2 = new Pawn("blackPawn_1","black", blackPawn_2);
-	this.blackPawn_3 = new Pawn("blackPawn_1","black", blackPawn_3);
-	this.blackPawn_4 = new Pawn("blackPawn_1","black", blackPawn_4);
-	this.blackPawn_5 = new Pawn("blackPawn_1","black", blackPawn_5);
-	this.blackPawn_6 = new Pawn("blackPawn_1","black", blackPawn_6);
-	this.blackPawn_7 = new Pawn("blackPawn_1","black", blackPawn_7);
-	this.blackPawn_8 = new Pawn("blackPawn_1","black", blackPawn_8);
+	this.blackPawn_2 = new Pawn("blackPawn_2","black", blackPawn_2);
+	this.blackPawn_3 = new Pawn("blackPawn_3","black", blackPawn_3);
+	this.blackPawn_4 = new Pawn("blackPawn_4","black", blackPawn_4);
+	this.blackPawn_5 = new Pawn("blackPawn_5","black", blackPawn_5);
+	this.blackPawn_6 = new Pawn("blackPawn_6","black", blackPawn_6);
+	this.blackPawn_7 = new Pawn("blackPawn_7","black", blackPawn_7);
+	this.blackPawn_8 = new Pawn("blackPawn_8","black", blackPawn_8);
 
 	
 	this.whiteRook_1= new Rook( "whiteRook_1", whiteRook_1, "white"); 
-	this.whiteRook_2=new Rook( "whiteRook_1", whiteRook_2, "white"); 
+	this.whiteRook_2=new Rook( "whiteRook_2", whiteRook_2, "white"); 
 	this.blackRook_1= new Rook( "blackRook_1", blackRook_1, "black"); 
-	this.blackRook_2=new Rook( "blackRook_1", blackRook_2, "black"); 
+	this.blackRook_2=new Rook( "blackRook_2", blackRook_2, "black"); 
 
 	this.whiteHorseman_1=new Horseman("whiteHorseman_1", "white", whiteHorseman_1); 
 	this.whiteHorseman_2=new Horseman("whiteHorseman_2", "white", whiteHorseman_2); 
