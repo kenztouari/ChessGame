@@ -1,0 +1,11 @@
+--module-path
+" Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib"
+--add-modules
+javafx.controls,javafx.fxml
+-Dfile.encoding=UTF-8
+-p
+/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx.controls.jar:/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx.fxml.jar:/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx.graphics.jar:/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx.media.jar:/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx.swing.jar:/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx.web.jar:/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx.base.jar:/Users/kenztouari/Downloads/javafx-sdk-19.0.2.1/lib/javafx-swt.jar
+-classpath
+/Users/kenztouari/eclipse-workspace/chessGame/bin
+-XX:+ShowCodeDetailsInExceptionMessages
+application.Main

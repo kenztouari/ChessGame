@@ -58,6 +58,7 @@ public class Pawn extends Piece  {
 				if(previsions(board, x, y+2) == false ) {
 					previsions.add(lookForAPiece(board, x, y+2));
 				}
+				
 			}
 			if(previsions(board, x, y, 1, 1) == true) {
 				previsions.add(lookForAPiece(board, x+1, y+1));
@@ -75,9 +76,9 @@ public class Pawn extends Piece  {
 		else {
 			System.out.println("on est noirs");
 			if(previsions(board, x, y-1) == false ) {
-				previsions.add(lookForAPiece(board, x, y+1));
+				previsions.add(lookForAPiece(board, x, y-1));
 				if(previsions(board, x, y-2) == false ) {
-					previsions.add(lookForAPiece(board, x, y+2));
+					previsions.add(lookForAPiece(board, x, y-2));
 				}
 			}
 			if(previsions(board, x, y, -1, -1) == true) {
@@ -100,6 +101,7 @@ public class Pawn extends Piece  {
 				return false; 
 			}
 			lookForAPiece(board, otherX+x,otherY+y).setStyle("-fx-background-color : BURLYWOOD");
+			return true; 
 		}
 		return false; 
 	}

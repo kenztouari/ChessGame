@@ -50,7 +50,7 @@ public void moveUpRight(GridPane board, int x, int y,ArrayList<Node>previsions) 
 	}
 		else {
 			if(Controleur.findControleur(getPieceOnTheWay(board,x+i,y-i)).getColor()!=this.getColor()) {
-				lookForAPiece(board, x+1, y-1).setStyle("-fx-background-color : BURLYWOOD");
+				lookForAPiece(board, x+i, y-i).setStyle("-fx-background-color : BURLYWOOD");
 				previsions.add(lookForAPiece(board,x+i, y-i));
 				previsions.add(getPieceOnTheWay(board,x+i, y-i));
 		}

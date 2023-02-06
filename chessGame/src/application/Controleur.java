@@ -344,6 +344,7 @@ void showPossibilities (MouseEvent event ) {
 		int x= getValue(GridPane.getColumnIndex(source));
 		int y= getValue(GridPane.getRowIndex(source));
 		pieceToPlay=findControleur(source); 
+		System.out.println("je suis appelé 2"+pieceToPlay );
 		previsions=pieceToPlay.seePossibilities(board, x,y);
 		takePiece((Label)Piece.lookForAPiece(board,getValue(GridPane.getColumnIndex(source)) ,getValue(GridPane.getRowIndex(source))));
 	
@@ -375,6 +376,7 @@ public static Piece findControleur(Node source) {
 	for (int i =0; i<Controleur.pieceBoard.size(); i++) {
 		
 		if(source.getId().toString().equals(Controleur.pieceBoard.get(i).toString())) {
+			System.out.println("nvknvke"+Controleur.pieceBoard.get(i));
 			return Controleur.pieceBoard.get(i);
 		}
 	}
@@ -399,6 +401,7 @@ public void takePiece(Label piece) {
 		System.out.println("je suis previsions.get(i)"+previsions.get(i));
 		System.out.println("je suis piece"+piece);
 		if(previsions.get(i)==piece) {
+			//ne rentre pas ici 
 			System.out.println("je vais manger 3");
 			
 			if(i+1<Controleur.previsions.size() && previsions.get(i+1) instanceof ImageView) {
@@ -406,7 +409,7 @@ public void takePiece(Label piece) {
 				
 				if(win(findControleur(previsions.get(i+1)))==false ){
 					System.out.println("je vais manger 5");
-					board.getChildren().remove(previsions.get(i+1));
+					//board.getChildren().remove(previsions.get(i+1));
 					pieceToPlay.Move(board,  getValue(GridPane.getColumnIndex(piece)), getValue(GridPane.getRowIndex(piece)));
 					stopPrevision();
 				}
@@ -425,7 +428,7 @@ public void stopPrevision() {
 				Controleur.previsions.get(i).setStyle("-fx-background-color: brown");
 			}
 			else {
-				Controleur.previsions.get(i).setStyle("-fx-background : white");	
+				Controleur.previsions.get(i).setStyle("-fx-background-color : white");	
 }
 		}
 	}
@@ -491,7 +494,7 @@ void Act(MouseEvent event ) {
 		pieceToPlay.Move(board, x,y);
 		System.out.println("je vais manger act 2");
 		
-		//pieceToPlay=null; 
+		pieceToPlay=null; 
 		stopPrevision();
 		if(whitePlay==false) {
 			whitePlay= true;
@@ -501,7 +504,7 @@ void Act(MouseEvent event ) {
 		}
 	}
 	else {
-		//pieceToPlay= null; 
+		pieceToPlay= null; 
 		stopPrevision();
 	}
 }
