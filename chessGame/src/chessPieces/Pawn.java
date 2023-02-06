@@ -53,13 +53,43 @@ public class Pawn extends Piece  {
 		ArrayList <Node> previsions = new ArrayList<Node>();
 		if(this.getColor().equals("white")) {
 			System.out.println("on est blancs");
-			movetoBottom(board,  x,y,previsions) ;
+			if(previsions(board, x, y+1) == false ) {
+				previsions.add(lookForAPiece(board, x, y+1));
+				if(previsions(board, x, y+2) == false ) {
+					previsions.add(lookForAPiece(board, x, y+2));
+				}
+			}
+			if(previsions(board, x, y, 1, 1) == true) {
+				previsions.add(lookForAPiece(board, x+1, y+1));
+				previsions.add(getPieceOnTheWay(board, x+1, y+1));
+
+			}
+			if(previsions(board, x, y, -1, 1) == true) {
+				previsions.add(lookForAPiece(board, x-1, y+1));
+				previsions.add(getPieceOnTheWay(board, x-1, y+1));
+
+			}
+
 		}
 		
 		else {
 			System.out.println("on est noirs");
-			movetoTop(board, x,y,previsions) ;
-			
+			if(previsions(board, x, y-1) == false ) {
+				previsions.add(lookForAPiece(board, x, y+1));
+				if(previsions(board, x, y-2) == false ) {
+					previsions.add(lookForAPiece(board, x, y+2));
+				}
+			}
+			if(previsions(board, x, y, -1, -1) == true) {
+				previsions.add(lookForAPiece(board, x-1, y-1));
+				previsions.add(getPieceOnTheWay(board, x-1, y-1));
+
+			}
+			if(previsions(board, x, y, 1, -1) == true) {
+				previsions.add(lookForAPiece(board, x+1, y-1));
+				previsions.add(getPieceOnTheWay(board, x+1, y-1));
+
+			}
 	}
 		return previsions; 
 		}
@@ -69,7 +99,7 @@ public class Pawn extends Piece  {
 			if(Controleur.findControleur(getPieceOnTheWay(board, x+otherX, y+otherY)).getColor()==this.getColor()) {
 				return false; 
 			}
-			lookForAPiece(board, otherX+x,otherY+y).setStyle("-fx-backrground-color:GREY");
+			lookForAPiece(board, otherX+x,otherY+y).setStyle("-fx-background-color : BURLYWOOD");
 		}
 		return false; 
 	}
