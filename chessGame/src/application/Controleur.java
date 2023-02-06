@@ -429,10 +429,10 @@ public boolean win ( Piece piece ) {
 		try {
 			Stage stage = (Stage) piece_00.getScene().getWindow(); 
 			stage.close();
-			Parent root = FXMLLoader.load(getClass().getResource("blackwin.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("whitewin.fxml"));
 			Scene scene = new Scene(root);
 			Stage newWindow = new Stage();
-			newWindow.setTitle("Black win");
+			newWindow.setTitle("White win");
 			newWindow.setScene(scene);
 			newWindow.show();
 			return true;
@@ -450,10 +450,10 @@ public boolean win ( Piece piece ) {
 	try {
 		Stage stage = (Stage) piece_00.getScene().getWindow(); 
 		stage.close();
-		Parent root = FXMLLoader.load(getClass().getResource("whitewin.fxml"));
+		Parent root = FXMLLoader.load(getClass().getResource("blackwin.fxml"));
 		Scene scene = new Scene(root);
 		Stage newWindow = new Stage();
-		newWindow.setTitle("White win");
+		newWindow.setTitle("black win");
 		newWindow.setScene(scene);
 		newWindow.show();
 		return true;
