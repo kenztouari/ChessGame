@@ -339,13 +339,14 @@ void showPossibilities (MouseEvent event ) {
 		    board, 
 			getValue(GridPane.getColumnIndex(source)),
 			getValue(GridPane.getRowIndex(source))).getStyle()
-				.equals("-fx-background-color: white;")){
+				.equals("-fx-background-color: white")){
 		System.out.println("je suis appelé");
 		int x= getValue(GridPane.getColumnIndex(source));
 		int y= getValue(GridPane.getRowIndex(source));
 		pieceToPlay=findControleur(source); 
 		System.out.println("je suis appelé 2"+pieceToPlay );
 		previsions=pieceToPlay.seePossibilities(board, x,y);
+		System.out.println("preisions show possibilities "+previsions);
 		takePiece((Label)Piece.lookForAPiece(board,getValue(GridPane.getColumnIndex(source)) ,getValue(GridPane.getRowIndex(source))));
 	
 		if(whitePlay==false) {
@@ -395,11 +396,7 @@ public void takePiece(Label piece) {
 	System.out.println("previsions size "+Controleur.previsions.size());
 	
 	for(int i=0; i<Controleur.previsions.size(); i++) {
-		System.out.println("i="+i);
-		System.out.println("je vais manger 2 take a piece ");
 		
-		System.out.println("je suis previsions.get(i)"+previsions.get(i));
-		System.out.println("je suis piece"+piece);
 		if(previsions.get(i)==piece) {
 			//ne rentre pas ici 
 			System.out.println("je vais manger 3");

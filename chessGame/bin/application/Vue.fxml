@@ -72,7 +72,7 @@
       </HBox>
    </bottom>
    <center>
-      <GridPane fx:id="board" alignment="CENTER" gridLinesVisible="true" prefHeight="556.0" prefWidth="512.0" style="-fx-border-color: BLACK;" BorderPane.alignment="CENTER">
+      <GridPane fx:id="board" alignment="CENTER" gridLinesVisible="true" prefHeight="556.0" prefWidth="512.0" style="-fx-border-color: BLACK" BorderPane.alignment="CENTER">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -94,70 +94,70 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-<Label fx:id="piece_22" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-<Label fx:id="piece_57" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-<Label fx:id="piece_20" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" />
-<Label fx:id="piece_11" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-<Label fx:id="piece_40" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" />
-<Label fx:id="piece_31" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-<Label fx:id="piece_60" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" />
-<Label fx:id="piece_71" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-<Label fx:id="piece_51" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-<Label fx:id="piece_42" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-<Label fx:id="piece_62" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-<Label fx:id="piece_13" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-<Label fx:id="piece_33" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-<Label fx:id="piece_53" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-<Label fx:id="piece_73" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-<Label fx:id="piece_04" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.rowIndex="4" />
-<Label fx:id="piece_24" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-<Label fx:id="piece_44" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-<Label fx:id="piece_64" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-<Label fx:id="piece_15" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-<Label fx:id="piece_35" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-<Label fx:id="piece_55" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-<Label fx:id="piece_75" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-<Label fx:id="piece_06" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.rowIndex="6" />
-<Label fx:id="piece_26" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-<Label fx:id="piece_46" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-<Label fx:id="piece_66" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-<Label fx:id="piece_37" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-<Label fx:id="piece_17" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-<Label fx:id="piece_00" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" />
-<Label fx:id="piece_77" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-<Label fx:id="piece_02" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white;" GridPane.rowIndex="2" />
-<Label fx:id="piece_10" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="1" />
-<Label fx:id="piece_21" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-<Label fx:id="piece_30" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="3" />
-<Label fx:id="piece_01" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.rowIndex="1" />
-<Label fx:id="piece_12" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-<Label fx:id="piece_03" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.rowIndex="3" />
-<Label fx:id="piece_14" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-<Label fx:id="piece_05" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.rowIndex="5" />
-<Label fx:id="piece_16" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-<Label fx:id="piece_07" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.rowIndex="7" />
-<Label fx:id="piece_27" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-<Label fx:id="piece_25" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-<Label fx:id="piece_23" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-<Label fx:id="piece_32" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-<Label fx:id="piece_34" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-<Label fx:id="piece_47" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-<Label fx:id="piece_36" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-<Label fx:id="piece_41" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-<Label fx:id="piece_43" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-<Label fx:id="piece_45" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-<Label fx:id="piece_50" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="5" />
-<Label fx:id="piece_52" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-<Label fx:id="piece_54" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-<Label fx:id="piece_56" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-<Label fx:id="piece_61" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-<Label fx:id="piece_70" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="7" />
-<Label fx:id="piece_72" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-<Label fx:id="piece_63" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-<Label fx:id="piece_65" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-<Label fx:id="piece_74" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-<Label fx:id="piece_76" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-<Label fx:id="piece_67" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown;" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+<Label fx:id="piece_22" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+<Label fx:id="piece_57" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+<Label fx:id="piece_20" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="2" />
+<Label fx:id="piece_11" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<Label fx:id="piece_40" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="4" />
+<Label fx:id="piece_31" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+<Label fx:id="piece_60" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="6" />
+<Label fx:id="piece_71" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+<Label fx:id="piece_51" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+<Label fx:id="piece_42" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+<Label fx:id="piece_62" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+<Label fx:id="piece_13" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+<Label fx:id="piece_33" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+<Label fx:id="piece_53" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+<Label fx:id="piece_73" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+<Label fx:id="piece_04" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.rowIndex="4" />
+<Label fx:id="piece_24" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+<Label fx:id="piece_44" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+<Label fx:id="piece_64" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+<Label fx:id="piece_15" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+<Label fx:id="piece_35" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+<Label fx:id="piece_55" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+<Label fx:id="piece_75" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+<Label fx:id="piece_06" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.rowIndex="6" />
+<Label fx:id="piece_26" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+<Label fx:id="piece_46" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+<Label fx:id="piece_66" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+<Label fx:id="piece_37" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+<Label fx:id="piece_17" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+<Label fx:id="piece_00" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" />
+<Label fx:id="piece_77" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+<Label fx:id="piece_02" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: white" GridPane.rowIndex="2" />
+<Label fx:id="piece_10" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="1" />
+<Label fx:id="piece_21" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+<Label fx:id="piece_30" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="3" />
+<Label fx:id="piece_01" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.rowIndex="1" />
+<Label fx:id="piece_12" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+<Label fx:id="piece_03" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.rowIndex="3" />
+<Label fx:id="piece_14" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+<Label fx:id="piece_05" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.rowIndex="5" />
+<Label fx:id="piece_16" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+<Label fx:id="piece_07" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.rowIndex="7" />
+<Label fx:id="piece_27" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+<Label fx:id="piece_25" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+<Label fx:id="piece_23" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+<Label fx:id="piece_32" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+<Label fx:id="piece_34" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+<Label fx:id="piece_47" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+<Label fx:id="piece_36" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+<Label fx:id="piece_41" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+<Label fx:id="piece_43" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+<Label fx:id="piece_45" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+<Label fx:id="piece_50" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="5" />
+<Label fx:id="piece_52" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+<Label fx:id="piece_54" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+<Label fx:id="piece_56" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+<Label fx:id="piece_61" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+<Label fx:id="piece_70" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="7" />
+<Label fx:id="piece_72" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+<Label fx:id="piece_63" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+<Label fx:id="piece_65" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+<Label fx:id="piece_74" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+<Label fx:id="piece_76" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+<Label fx:id="piece_67" onMouseClicked="#Act" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: brown" GridPane.columnIndex="6" GridPane.rowIndex="7" />
 
 
 
