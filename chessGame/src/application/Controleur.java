@@ -331,15 +331,22 @@ catch(IOException e ) {
 */ 
 @FXML
 void showPossibilities (MouseEvent event ) {
-	Node source =(Node)event.getSource(); 
+	Node source =(Node)event.getSource();
+	
+	
+	
 	if(Piece.lookForAPiece(
 		    board, 
 			getValue(GridPane.getColumnIndex(source)),
 			getValue(GridPane.getRowIndex(source))).getStyle()
-				.equals("-fx-background-color:BURLYWOOD")){
-		
-	
+				.equals("-fx-background-color: white;")){
+		System.out.println("je suis appelé");
+		int x= getValue(GridPane.getColumnIndex(source));
+		int y= getValue(GridPane.getRowIndex(source));
+		pieceToPlay=findControleur(source); 
+		previsions=pieceToPlay.seePossibilities(board, x,y);
 		takePiece((Label)Piece.lookForAPiece(board,getValue(GridPane.getColumnIndex(source)) ,getValue(GridPane.getRowIndex(source))));
+	
 		if(whitePlay==false) {
 			whitePlay=true; 
 		}
@@ -382,9 +389,11 @@ public static int getValue(Object valeur) {
 }
 
 public void takePiece(Label piece) {
-	System.out.println("je vais manger 1");
+	System.out.println("je vais manger 1 take a piece ");
+	System.out.println("previsions size "+Controleur.previsions.size());
 	for(int i=0; i<Controleur.previsions.size(); i++) {
-		System.out.println("je vais manger 2");
+		System.out.println("i="+i);
+		System.out.println("je vais manger 2 take a piece ");
 		if(previsions.get(i)==piece) {
 			System.out.println("je vais manger 3");
 			if(i+1<Controleur.previsions.size() && previsions.get(i+1) instanceof ImageView) {
@@ -473,7 +482,6 @@ void Act(MouseEvent event ) {
 		int x=getValue(GridPane.getColumnIndex(piece_cell));
 		int y=getValue(GridPane.getRowIndex(piece_cell));
 		System.out.println("je vais manger act");
-		
 		pieceToPlay.Move(board, x,y);
 		pieceToPlay=null; 
 		stopPrevision();
