@@ -371,7 +371,7 @@ void showPossibilities (MouseEvent event ) {
 }
 
 public static Piece findControleur(Node source) {
-	System.out.println("x ="+source.getId().toString());
+	System.out.println("x find controleur ="+source.getId().toString());
 	for (int i =0; i<Controleur.pieceBoard.size(); i++) {
 		
 		if(source.getId().toString().equals(Controleur.pieceBoard.get(i).toString())) {
@@ -391,13 +391,19 @@ public static int getValue(Object valeur) {
 public void takePiece(Label piece) {
 	System.out.println("je vais manger 1 take a piece ");
 	System.out.println("previsions size "+Controleur.previsions.size());
+	
 	for(int i=0; i<Controleur.previsions.size(); i++) {
 		System.out.println("i="+i);
 		System.out.println("je vais manger 2 take a piece ");
+		
+		System.out.println("je suis previsions.get(i)"+previsions.get(i));
+		System.out.println("je suis piece"+piece);
 		if(previsions.get(i)==piece) {
 			System.out.println("je vais manger 3");
+			
 			if(i+1<Controleur.previsions.size() && previsions.get(i+1) instanceof ImageView) {
 				System.out.println("je vais manger 4");
+				
 				if(win(findControleur(previsions.get(i+1)))==false ){
 					System.out.println("je vais manger 5");
 					board.getChildren().remove(previsions.get(i+1));
@@ -483,7 +489,9 @@ void Act(MouseEvent event ) {
 		int y=getValue(GridPane.getRowIndex(piece_cell));
 		System.out.println("je vais manger act");
 		pieceToPlay.Move(board, x,y);
-		pieceToPlay=null; 
+		System.out.println("je vais manger act 2");
+		
+		//pieceToPlay=null; 
 		stopPrevision();
 		if(whitePlay==false) {
 			whitePlay= true;
@@ -493,7 +501,7 @@ void Act(MouseEvent event ) {
 		}
 	}
 	else {
-		pieceToPlay= null; 
+		//pieceToPlay= null; 
 		stopPrevision();
 	}
 }

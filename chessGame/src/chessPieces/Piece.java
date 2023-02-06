@@ -93,7 +93,7 @@ public abstract class Piece extends ImageView  {
 		System.out.println("x"+y);
 		System.out.println("modelisation "+this.getModelisationPiece());
 		GridPane.setColumnIndex(this.getModelisationPiece(),x);
-		GridPane.setColumnIndex(this.getModelisationPiece(), y);
+		GridPane.setRowIndex(this.getModelisationPiece(), y);
 	}
 
 
