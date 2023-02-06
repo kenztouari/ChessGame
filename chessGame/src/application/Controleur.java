@@ -337,6 +337,7 @@ void showPossibilities (MouseEvent event ) {
 			getValue(GridPane.getColumnIndex(source)),
 			getValue(GridPane.getRowIndex(source))).getStyle()
 				.equals("-fx-background-color:BURLYWOOD")){
+		
 	
 		takePiece((Label)Piece.lookForAPiece(board,getValue(GridPane.getColumnIndex(source)) ,getValue(GridPane.getRowIndex(source))));
 		if(whitePlay==false) {
@@ -381,14 +382,20 @@ public static int getValue(Object valeur) {
 }
 
 public void takePiece(Label piece) {
+	System.out.println("je vais manger 1");
 	for(int i=0; i<Controleur.previsions.size(); i++) {
+		System.out.println("je vais manger 2");
 		if(previsions.get(i)==piece) {
+			System.out.println("je vais manger 3");
 			if(i+1<Controleur.previsions.size() && previsions.get(i+1) instanceof ImageView) {
+				System.out.println("je vais manger 4");
 				if(win(findControleur(previsions.get(i+1)))==false ){
+					System.out.println("je vais manger 5");
 					board.getChildren().remove(previsions.get(i+1));
 					pieceToPlay.Move(board,  getValue(GridPane.getColumnIndex(piece)), getValue(GridPane.getRowIndex(piece)));
 					stopPrevision();
 				}
+				System.out.println("je vais manger 6");
 			}
 			break; 
 		}
@@ -460,10 +467,13 @@ public boolean win ( Piece piece ) {
 @FXML 
 void Act(MouseEvent event ) {
 	Label piece = (Label) event.getSource();
-	if (piece.getStyle().equals("-fx-backrground-color : BURLYWOOD")) {
+	if (piece.getStyle().equals("-fx-background-color : BURLYWOOD")) {
+		
 		Node piece_cell=(Node)event.getSource();
 		int x=getValue(GridPane.getColumnIndex(piece_cell));
 		int y=getValue(GridPane.getRowIndex(piece_cell));
+		System.out.println("je vais manger act");
+		
 		pieceToPlay.Move(board, x,y);
 		pieceToPlay=null; 
 		stopPrevision();
