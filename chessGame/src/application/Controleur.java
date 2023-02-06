@@ -263,8 +263,9 @@ private Button btnDraw;
 @FXML
 private Button btnBlackSurrender;
 
-// 
+/*
 @FXML
+
 void blackSurrender (MouseEvent event) {
 	try {
 		pieceToPlay = null; 
@@ -283,8 +284,7 @@ void blackSurrender (MouseEvent event) {
 	catch(IOException e ) {
 		e.printStackTrace(); 
 	}
-}
-	
+}*/
 @FXML
  void draw(MouseEvent event) {
 	 
@@ -306,6 +306,7 @@ catch(IOException e ) {
 	e.printStackTrace(); 
 }
  }
+/*
 @FXML
  void whiteSurrender(MouseEvent event) {
 	 try{
@@ -327,7 +328,7 @@ catch(IOException e ) {
 		}
 		 }
  
-
+*/ 
 @FXML
 void showPossibilities (MouseEvent event ) {
 	Node source =(Node)event.getSource(); 
