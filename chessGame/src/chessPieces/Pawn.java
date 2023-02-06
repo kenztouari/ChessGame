@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import application.Controleur;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
-import movements.Linear;
+
 
 public class Pawn extends Piece  {
 
@@ -23,7 +23,7 @@ public class Pawn extends Piece  {
 			}
 			else {
 				if(Controleur.findControleur(getPieceOnTheWay(board,x,i)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x, i).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x, i).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(lookForAPiece(board,x, i));
 					previsions.add(getPieceOnTheWay(board,x, i));
 			}
@@ -39,7 +39,7 @@ public class Pawn extends Piece  {
 			}
 			else {
 				if(Controleur.findControleur(getPieceOnTheWay(board,x,i)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x, i).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x, i).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(lookForAPiece(board,x, i));
 					previsions.add(getPieceOnTheWay(board,x, i));
 			}

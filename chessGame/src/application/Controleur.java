@@ -335,7 +335,7 @@ void showPossibilities (MouseEvent event ) {
 		    board, 
 			getValue(GridPane.getColumnIndex(source)),
 			getValue(GridPane.getRowIndex(source))).getStyle()
-				.equals("-fx-background-color:GREY")){
+				.equals("-fx-background-color:BURLYWOOD")){
 	
 		takePiece((Label)Piece.lookForAPiece(board,getValue(GridPane.getColumnIndex(source)) ,getValue(GridPane.getRowIndex(source))));
 		if(whitePlay==false) {
@@ -352,12 +352,12 @@ void showPossibilities (MouseEvent event ) {
 		
 		if(findControleur(source)!=null) {
 			pieceToPlay=findControleur(source); 
-		if(whitePlay==true && pieceToPlay.getColor().equals("white")) {
+		//if(whitePlay==true && pieceToPlay.getColor().equals("white")) {
 				previsions=pieceToPlay.seePossibilities(board, x,y);
 			}
-			else if( whitePlay==false && pieceToPlay.getColor().equals("black")) {
-				previsions= pieceToPlay.seePossibilities(board, x, y);}
-			}
+			//else if( whitePlay==false && pieceToPlay.getColor().equals("black")) {
+			//	previsions= pieceToPlay.seePossibilities(board, x, y);}
+		//	}
 	}
 }
 
@@ -459,7 +459,7 @@ public boolean win ( Piece piece ) {
 @FXML 
 void Act(MouseEvent event ) {
 	Label piece = (Label) event.getSource();
-	if (piece.getStyle().equals("-fx-backrground-color : GREY")) {
+	if (piece.getStyle().equals("-fx-backrground-color : BURLYWOOD")) {
 		Node piece_cell=(Node)event.getSource();
 		int x=getValue(GridPane.getColumnIndex(piece_cell));
 		int y=getValue(GridPane.getRowIndex(piece_cell));

@@ -19,7 +19,7 @@ public class Horseman extends Piece {
 				System.out.println("piece = "+getPieceOnTheWay(board, x-2,y-1));
 				if(previsions(board, x-2,y-1)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x-2,y-1)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x-2,y-1).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x-2,y-1).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x-2,y-1));
 				}
 			}
@@ -28,7 +28,7 @@ public class Horseman extends Piece {
 				System.out.println("piece= "+getPieceOnTheWay(board, x-2,y+1));
 				if(previsions(board, x-2,y+1)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x-2,y+1)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x-2,y+1).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x-2,y+1).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x-2,y+1));
 			}
 		}
@@ -37,7 +37,7 @@ public class Horseman extends Piece {
 				System.out.println("piece= "+getPieceOnTheWay(board, x-1,y+1));
 				if(previsions(board, x-1,y-2)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x-1,y-2)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x-1,y-2).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x-1,y-2).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x-1,y-2));
 				
 			}
@@ -47,7 +47,7 @@ public class Horseman extends Piece {
 				System.out.println("piece= "+getPieceOnTheWay(board, x-1,y+1));
 				if(previsions(board, x-1,y+2)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x-1,y+2)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x-1,y+2).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x-1,y+2).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x-1,y+2));
 				
 			}
@@ -57,7 +57,7 @@ public class Horseman extends Piece {
 				System.out.println("piece= "+getPieceOnTheWay(board, x+1,y-2));
 				if(previsions(board, x+1,y-2)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x+1,y-2)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x+1,y-2).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x+1,y-2).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x+1,y-2));
 				
 			}
@@ -67,7 +67,7 @@ public class Horseman extends Piece {
 				System.out.println("piece= "+getPieceOnTheWay(board, x+1,y+2));
 				if(previsions(board, x+1,y+2)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x+1,y+2)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x+1,y+2).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x+1,y+2).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x+1,y+2));
 			}
 			}
@@ -76,7 +76,7 @@ public class Horseman extends Piece {
 				System.out.println("piece= "+getPieceOnTheWay(board, x+2,y-1));
 				if(previsions(board, x+2,y-1)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x+2,y-1)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x+2,y-1).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x+2,y-1).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x+2,y-1));
 			}
 			}
@@ -85,7 +85,7 @@ public class Horseman extends Piece {
 				System.out.println("piece= "+getPieceOnTheWay(board, x+2,y+1));
 				if(previsions(board, x+2,y+1)==true &&
 						Controleur.findControleur(getPieceOnTheWay(board, x+2,y+1)).getColor()!=this.getColor()) {
-					lookForAPiece(board, x+2,y+1).setStyle("-fx-background-color : GREY");
+					lookForAPiece(board, x+2,y+1).setStyle("-fx-background-color : BURLYWOOD");
 					previsions.add(getPieceOnTheWay(board,x+2,y+1));
 			}
 			}

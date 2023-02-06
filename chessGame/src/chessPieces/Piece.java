@@ -82,7 +82,7 @@ public abstract class Piece extends ImageView  {
 		System.out.println("yprevisions="+y);
 		if(getPieceOnTheWay(board,x,y)==null) {
 			System.out.println("out");
-			lookForAPiece(board,x,y).setStyle("-fx-background-color : GREY");
+			lookForAPiece(board,x,y).setStyle("-fx-background-color : BURLYWOOD");
 			return false;
 		}
 		return true; 

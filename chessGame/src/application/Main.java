@@ -1,14 +1,16 @@
 package application;
 	
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 
 import javafx.application.Application;
-
+import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import javafx.scene.image.Image;
@@ -37,7 +39,7 @@ public class Main extends Application {
 			
 			
 			
-			InputStream is = Files.newInputStream(Paths.get("res/images/image1.jpg"));
+			/*InputStream is = Files.newInputStream(Paths.get("res/images/image1.jpg"));
 			
 			Image img = new Image(is);
 			
@@ -53,9 +55,22 @@ public class Main extends Application {
 		
 			
 			
-			root.getChildren().addAll(imgView,gameMenu);
+			root.getChildren().addAll(imgView,gameMenu);*/
 			
-			Scene scene = new Scene(root);
+			 root = FXMLLoader.load(getClass().getResource("Vue.fxml"));
+				Scene scene = new Scene(root);
+				Stage newWindow = new Stage();
+				newWindow.setTitle("Game");
+				newWindow.setScene(scene);
+				newWindow.setResizable(false);
+				newWindow.show();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+			/*Scene scene = new Scene(root);
 			primaryStage.setResizable(false);
 			
 			primaryStage.setScene(scene);
@@ -63,8 +78,8 @@ public class Main extends Application {
 			
 		} catch(Exception e) {
 			e.printStackTrace();
-		}
-	}
+		}*/
+	
 
 	
 	public static void main(String[] args) {
