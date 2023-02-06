@@ -357,12 +357,12 @@ void showPossibilities (MouseEvent event ) {
 		
 		if(findControleur(source)!=null) {
 			pieceToPlay=findControleur(source); 
-		//if(whitePlay==true && pieceToPlay.getColor().equals("white")) {
+		if(whitePlay==true && pieceToPlay.getColor().equals("white")) {
 				previsions=pieceToPlay.seePossibilities(board, x,y);
 			}
-			//else if( whitePlay==false && pieceToPlay.getColor().equals("black")) {
-			//	previsions= pieceToPlay.seePossibilities(board, x, y);}
-		//	}
+			else if( whitePlay==false && pieceToPlay.getColor().equals("black")) {
+				previsions= pieceToPlay.seePossibilities(board, x, y);}
+			}
 	}
 }
 
@@ -370,7 +370,6 @@ public static Piece findControleur(Node source) {
 	for (int i =0; i<Controleur.pieceBoard.size(); i++) {
 		
 		if(source.getId().toString().equals(Controleur.pieceBoard.get(i).toString())) {
-			System.out.println("nvknvke"+Controleur.pieceBoard.get(i));
 			return Controleur.pieceBoard.get(i);
 		}
 	}
@@ -385,21 +384,17 @@ public static int getValue(Object valeur) {
 }
 
 public void takePiece(Label piece) {
-	System.out.println("je vais manger 1 take a piece ");
-	System.out.println("previsions size "+Controleur.previsions.size());
+	
 	
 	for(int i=0; i<Controleur.previsions.size(); i++) {
-		System.out.println("je vais manger 2");
 		if(previsions.get(i)==piece) {
-			//ne rentre pas ici 
-			System.out.println("je vais manger 3");
 			
 			if(i+1<Controleur.previsions.size() && previsions.get(i+1) instanceof ImageView) {
 				System.out.println("je vais manger 4");
 				
 				if(win(findControleur(previsions.get(i+1)))==false ){
 					System.out.println("je vais manger 5");
-					//board.getChildren().remove(previsions.get(i+1));
+					board.getChildren().remove(previsions.get(i+1));
 					pieceToPlay.Move(board,  getValue(GridPane.getColumnIndex(piece)), getValue(GridPane.getRowIndex(piece)));
 					stopPrevision();
 				}
