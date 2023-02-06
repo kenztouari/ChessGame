@@ -339,14 +339,8 @@ void showPossibilities (MouseEvent event ) {
 		    board, 
 			getValue(GridPane.getColumnIndex(source)),
 			getValue(GridPane.getRowIndex(source))).getStyle()
-				.equals("-fx-background-color: white")){
-		System.out.println("je suis appelé");
-		int x= getValue(GridPane.getColumnIndex(source));
-		int y= getValue(GridPane.getRowIndex(source));
-		pieceToPlay=findControleur(source); 
-		System.out.println("je suis appelé 2"+pieceToPlay );
-		previsions=pieceToPlay.seePossibilities(board, x,y);
-		System.out.println("preisions show possibilities "+previsions);
+				.equals("-fx-background-color : BURLYWOOD")){
+
 		takePiece((Label)Piece.lookForAPiece(board,getValue(GridPane.getColumnIndex(source)) ,getValue(GridPane.getRowIndex(source))));
 	
 		if(whitePlay==false) {
@@ -373,7 +367,6 @@ void showPossibilities (MouseEvent event ) {
 }
 
 public static Piece findControleur(Node source) {
-	System.out.println("x find controleur ="+source.getId().toString());
 	for (int i =0; i<Controleur.pieceBoard.size(); i++) {
 		
 		if(source.getId().toString().equals(Controleur.pieceBoard.get(i).toString())) {
@@ -396,7 +389,7 @@ public void takePiece(Label piece) {
 	System.out.println("previsions size "+Controleur.previsions.size());
 	
 	for(int i=0; i<Controleur.previsions.size(); i++) {
-		
+		System.out.println("je vais manger 2");
 		if(previsions.get(i)==piece) {
 			//ne rentre pas ici 
 			System.out.println("je vais manger 3");
@@ -410,7 +403,6 @@ public void takePiece(Label piece) {
 					pieceToPlay.Move(board,  getValue(GridPane.getColumnIndex(piece)), getValue(GridPane.getRowIndex(piece)));
 					stopPrevision();
 				}
-				System.out.println("je vais manger 6");
 			}
 			break; 
 		}
@@ -429,6 +421,7 @@ public void stopPrevision() {
 }
 		}
 	}
+	System.out.println("previsions "+previsions.toString());
 	Controleur.previsions.removeAll(Controleur.previsions);
 }
 
@@ -487,9 +480,7 @@ void Act(MouseEvent event ) {
 		Node piece_cell=(Node)event.getSource();
 		int x=getValue(GridPane.getColumnIndex(piece_cell));
 		int y=getValue(GridPane.getRowIndex(piece_cell));
-		System.out.println("je vais manger act");
 		pieceToPlay.Move(board, x,y);
-		System.out.println("je vais manger act 2");
 		
 		pieceToPlay=null; 
 		stopPrevision();
