@@ -370,7 +370,9 @@ public static Piece findControleur(Node source) {
 	for (int i =0; i<Controleur.pieceBoard.size(); i++) {
 		
 		if(source.getId().toString().equals(Controleur.pieceBoard.get(i).toString())) {
+			System.out.println(" Controleur.pieceBoard.get(i)"+ Controleur.pieceBoard.get(i));
 			return Controleur.pieceBoard.get(i);
+			
 		}
 	}
 	return null;
@@ -475,6 +477,11 @@ void Act(MouseEvent event ) {
 		Node piece_cell=(Node)event.getSource();
 		int x=getValue(GridPane.getColumnIndex(piece_cell));
 		int y=getValue(GridPane.getRowIndex(piece_cell));
+		if(pieceToPlay.toString().equals("blackKing")||pieceToPlay.toString().equals("whiteKing")){
+			System.out.println("coucou");
+			
+			
+		}
 		pieceToPlay.Move(board, x,y);
 		
 		pieceToPlay=null; 
