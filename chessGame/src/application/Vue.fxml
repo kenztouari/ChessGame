@@ -163,47 +163,47 @@
 
 
 
-            <ImageView fx:id="whiteRook_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="whiteRook_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/tour_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whiteHorseman_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <ImageView fx:id="whiteHorseman_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/cavalier_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whiteBishop_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+            <ImageView fx:id="whiteBishop_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/fou_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whiteQueen" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+            <ImageView fx:id="whiteQueen" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/reine_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whiteKing" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+            <ImageView fx:id="whiteKing" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/roi_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whiteBishop_2" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5">
+            <ImageView fx:id="whiteBishop_2" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/fou_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whiteHorseman_2" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6">
+            <ImageView fx:id="whiteHorseman_2" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="6" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/cavalier_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whiteRook_2" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7">
+            <ImageView fx:id="whiteRook_2" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="7" GridPane.rowIndex="0">
                <image>
                   <Image url="@../../img_pieces/tour_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="whitePawn_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+            <ImageView fx:id="whitePawn_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="1">
                <image>
                   <Image url="@../../img_pieces/pion_blanc.png" />
                </image>
@@ -243,7 +243,7 @@
                   <Image url="@../../img_pieces/pion_blanc.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="blackPawn_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+            <ImageView fx:id="blackPawn_1" fitHeight="62.5" fitWidth="62.5" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="6">
                <image>
                   <Image url="@../../img_pieces/pion_noir.png" />
                </image>
@@ -283,7 +283,7 @@
                   <Image url="@../../img_pieces/pion_noir.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="blackRook_1" fitHeight="62.5" fitWidth="62.5" layoutX="11.0" layoutY="246.0" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
+            <ImageView fx:id="blackRook_1" fitHeight="62.5" fitWidth="62.5" layoutX="11.0" layoutY="246.0" onMouseClicked="#showPossibilities" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="7">
                <image>
                   <Image url="@../../img_pieces/tour_noir.png" />
                </image>
